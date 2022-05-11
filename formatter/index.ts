@@ -96,3 +96,18 @@ export const format = (value: string, key?: FormattedValueType): FormattedValue 
     value: unformatted
   }
 }
+
+export const sizeFormatter = (size: number): string => {
+  const MIN_MB_NUMBER = 1000000
+  const MIN_SINGLE_DECIMAL = 100
+
+  const kilo = 1024
+  const sizes = ['kB', 'MB']
+  let decimals = 1
+  let unity = 1
+
+  if (size < MIN_SINGLE_DECIMAL) decimals = 2
+  if (size >= MIN_MB_NUMBER) unity = 2
+
+  return `${parseFloat((size / kilo ** unity).toFixed(decimals))} ${sizes[unity - 1]}`
+}

@@ -14,3 +14,9 @@ export type sizes =
   | 'giga'
 
 export type spaces = sizes
+
+export type commonProps = {
+  id?: string
+  className?: string
+  asChild?: boolean
+}
