@@ -33,7 +33,7 @@ Icon.parameters = { options: { showPanel: false } }
 export const Text = Template.bind({})
 Text.args = {
   title: 'Text Colors',
-  tokens: getTokens('icon'),
+  tokens: getTokens('text'),
   key: tokens.colors
 }
 Text.parameters = { options: { showPanel: false } }
