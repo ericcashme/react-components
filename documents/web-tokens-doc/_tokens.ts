@@ -13,6 +13,7 @@ export enum tokens {
   opacity = 'opacity',
   zIndices = 'zIndices'
 }
+
 export const getTokens = (usage: string, token = tokens.colors): tokensProps => {
   return Object.entries(theme[token]).reduce(
     (tokens, [key, value]) => ({
